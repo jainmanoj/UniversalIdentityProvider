@@ -24,3 +24,4 @@
   - Independent service (Standalone or Containerized or Cloud)
 
 **Architecture**
+[[https://github.com/jainman/repository/blob/master/doc/Architecture.jpg|alt=Architecture]]
