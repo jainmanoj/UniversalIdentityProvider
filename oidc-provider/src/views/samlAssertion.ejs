@@ -1,0 +1,14 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+</head>
+
+<body onload="document.forms.samlAssertionForm.submit()">
+  <form name="samlAssertionForm" action="<%= callbackUrl %>" method="post">
+    <input name='options' value="<%= options %>" />
+    <input name="userDetails" value="<%= userDetailsJson %>" />
+    <input type="submit" value="Continue" />
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     This is example metadata only. Do *NOT* supply it as is without review,
+     and do *NOT* provide it in real time to your partners.
+
+     This metadata is not dynamic - it will not change as your configuration changes.
+-->
+<EntityDescriptor  xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" entityID="https://idprovider.cosmaze.org/idp/shibboleth">
+
+    <!-- <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0"> -->
+    <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">cosmaze.org</shibmd:Scope>
+<!--
+    Fill in the details for your IdP here 
+
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">A Name for the IdP at idprovider.cosmaze.org</mdui:DisplayName>
+                <mdui:Description xml:lang="en">Enter a description of your IdP at idprovider.cosmaze.org</mdui:Description>
+                <mdui:Logo height="80" width="80">https://idprovider.cosmaze.org/Path/To/Logo.png</mdui:Logo>
+            </mdui:UIInfo>
+-->
+        </Extensions>
+
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUfrqUPFRYINxdi7HSNXL0rmDGwW8wDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWaWRwcm92aWRlci5jb3NtYXplLm9yZzAeFw0xODA4MTMx
+MjA5MTFaFw0zODA4MTMxMjA5MTFaMCExHzAdBgNVBAMMFmlkcHJvdmlkZXIuY29z
+bWF6ZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFvrV9RGkX
+SIymD7uQfaBXoF8jsn3jAhdSgijVlw8j0Oz7QK/7Xee+ksQwgzcZefmrfXATynq8
+V6mEcfVxQwb/R+dN0X8llI6oO6BsbDeped9qbiCe/QXGywHYfdrIZjbiH9+WxsJi
+0MKXXzY/Ii5YBP4NGghP+UuGy0FyucHAbiV0g7fDWSbJI1/bx1hmEM7VJ8Tk459E
+9qGR8/lAQhhrY/LsnFBwmntwHd9GoYQn13Y9O4gE1Fq020GfEfipAIxfetpzejnA
+SqhvNRTc2SbDSjXwPJxHgHctLO5V2YE8APlMQf/7tGcEkHPxYWutIfLQYr29DWiY
+3CUUmKv+T/QNAgMBAAGjczBxMB0GA1UdDgQWBBSiOf79NiEDFk7VagHc/LkbZc1m
+vzBQBgNVHREESTBHghZpZHByb3ZpZGVyLmNvc21hemUub3Jnhi1odHRwczovL2lk
+cHJvdmlkZXIuY29zbWF6ZS5vcmcvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBADmEMX5pp7gPg9kOOT8jFxHnURERSDxHQOcc5QUkvENl+sXXmbzAD5uu
+xOHbs3F9h3tc5wd0A521qxpj9CTzESvE6EgrmOFWjGn7Mf566+5YoeLXhq2V4pM5
+5YDDv0F8zApFKSaW71Tz8sQhYFJChpvu21dGw3lzZgUbNPhRJ/W6LWicpnpmERXl
+gye9LkYql14jLD3XSWsffXsDPFEeKblbPlnSLRbAj98sUwpedsubYBLoVmqJm05J
+VlO77o8hAHYzcUraiSIvJy6l1m0OksNOLKHpn7a9NIVMGBvWoE0v/bpb9gbWTdvu
+pDBcyAs4zPQYuEbJXe7/HNZ5oEd/jzg=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIDQjCCAiqgAwIBAgITf1zAkLgxjQ1HvzYM/togShfDgzANBgkqhkiG9w0BAQsF
+ADAhMR8wHQYDVQQDDBZpZHByb3ZpZGVyLmNvc21hemUub3JnMB4XDTE4MDgxMzEy
+MDkwN1oXDTM4MDgxMzEyMDkwN1owITEfMB0GA1UEAwwWaWRwcm92aWRlci5jb3Nt
+YXplLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIrOuHPDlQqu
+W2RnzE/gLp1lINgSQZuXv9NE4OyOinyomNynMY1gG5Ig261BN/hRpPzecQCGIt/y
+bu3XutyQDeyEl/73gRlF07wcK80zvGqfl84s5TOYozqAKGx2ob8gf3OdczFLJvyG
+9GlL3R/cgstm9wAzGFgZD6kxuOn9dLXSrweGAJkxTChCsMfoYyU+n8UcrFPx6irj
+UhsHpVqfr0Ufw4MxHNzm+/eIYIsGTldQ5y+vxvLKqto5d1yq7rB1kAAPY01XFRVo
+/FB2A7HT/uJ3uFaoAMZnxuQY15P2hGlaYZltDtJbxS6BIzMII0zMC2iC5w3QHJYr
+a4awEv9vUeMCAwEAAaNzMHEwHQYDVR0OBBYEFBxem+Oq0bnYdZNCPLX/0gwndiZ5
+MFAGA1UdEQRJMEeCFmlkcHJvdmlkZXIuY29zbWF6ZS5vcmeGLWh0dHBzOi8vaWRw
+cm92aWRlci5jb3NtYXplLm9yZy9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsF
+AAOCAQEAS3uN5M0WIY12nTC5z80/wJ7olbGcfDKrz40+rP0zZHUVjJhuI+byWmwx
+BgNcHXy15L7q84Md1W/HH0WzTpL7ECKW/E6xWEBRROQwvtLSuVvYItEJNJNutDrF
+autTSAP64O7e/i8iuZuQKG+e8IhJk/qBDtIsCWqeINHMJYW6JeAJj6FmgxbsBhGx
+5pNlLzWd11vONXbctBPigBp2rgDb78nrDFH+vaDmpOur2KRNLA4wX+glVPaZglo4
+d7blLUO5ei0iw7tPS7hFQ59AHo7VLa//8qYj7g99HiSmAtXHHfI50zSxWH2cHL8B
+torhbo5o3/81WmgVVeBGfzqgDRhJyA==
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUIzUG7i8lwpFkTYauAmBY7DFZTvIwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWaWRwcm92aWRlci5jb3NtYXplLm9yZzAeFw0xODA4MTMx
+MjA5MDlaFw0zODA4MTMxMjA5MDlaMCExHzAdBgNVBAMMFmlkcHJvdmlkZXIuY29z
+bWF6ZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKmIclHNVj
+BEs0kfLuplIQ+Dpt+Xbw25C+uzida2kQEq43FXnbZQXUf5rWKDeyxS3XGp67kuGj
+IESRb/2uty//MlSzUXkSBQxc7Bi8sYQP7U0pSHWI+PhSyE662FacN43fxlp9GaXX
+06wzzZsaat8PSV47iItv+nlxQNXsCFw6IRlA9ADSlrhDTBLf7c2ddHEbaNPt8bpd
+j5iQ3RHCFHX/uSBa0M/E8Vg1UXzTaoSusrTM1+yZMwdpRYzekGgDcwnH1STL+n8n
+uBsb/0vZGK/zkE5U34jGGggEAC+tm8MKIVnK3hjxm6R+WgcGfteho/JGAd4JDCNX
+qej3vsutTm2pAgMBAAGjczBxMB0GA1UdDgQWBBSe74j+ESxj1obmYw+kT1vVXv/s
+hjBQBgNVHREESTBHghZpZHByb3ZpZGVyLmNvc21hemUub3Jnhi1odHRwczovL2lk
+cHJvdmlkZXIuY29zbWF6ZS5vcmcvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBAHwCmzPknHHhUgGB+J6HOX7Qrzs3IFtWHAJe2dVjIewJ03qeTJ0+Bj0M
+h7wEKB2jVaMfmVK3PSs87qWXNPdcFrHuLNN5ujWwwUqu7RODMHYlH2xcMO1lcoZQ
+iJ5k36mrwpcSf/aACBfXT4lOOX5fmGjQlzWq1oaOvTIzNGyUrt2UOQf6PMZJW2+G
+TB9EgK1v+1IukYX5szmW0MygEHdppCPdjz80tui9JkdXoZ/lgej0TYGITOaA6cHR
+MusPmR9hu531DLtf1+X8/qgWQ4ZdHL9rrD+dpr7FJT98DLMcVofkzv12B8fIEmqI
+mxOcZ3ar0kJB/MCW0ZxfMLv0PeTT0TI=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+
+        <!-- <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idprovider.cosmaze.org:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/> -->
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idprovider.cosmaze.org:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+
+        <!-- -->
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idprovider.cosmaze.org/idp/profile/SAML2/Redirect/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idprovider.cosmaze.org/idp/profile/SAML2/POST/SLO"/>
+        <!--
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idprovider.cosmaze.org/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idprovider.cosmaze.org:8443/idp/profile/SAML2/SOAP/SLO"/>
+        -->
+
+        <!-- <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idprovider.cosmaze.org/idp/profile/Shibboleth/SSO"/> -->
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idprovider.cosmaze.org/idp/profile/SAML2/POST/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idprovider.cosmaze.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idprovider.cosmaze.org/idp/profile/SAML2/Redirect/SSO"/>
+
+    </IDPSSODescriptor>
+
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">cosmaze.org</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUfrqUPFRYINxdi7HSNXL0rmDGwW8wDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWaWRwcm92aWRlci5jb3NtYXplLm9yZzAeFw0xODA4MTMx
+MjA5MTFaFw0zODA4MTMxMjA5MTFaMCExHzAdBgNVBAMMFmlkcHJvdmlkZXIuY29z
+bWF6ZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFvrV9RGkX
+SIymD7uQfaBXoF8jsn3jAhdSgijVlw8j0Oz7QK/7Xee+ksQwgzcZefmrfXATynq8
+V6mEcfVxQwb/R+dN0X8llI6oO6BsbDeped9qbiCe/QXGywHYfdrIZjbiH9+WxsJi
+0MKXXzY/Ii5YBP4NGghP+UuGy0FyucHAbiV0g7fDWSbJI1/bx1hmEM7VJ8Tk459E
+9qGR8/lAQhhrY/LsnFBwmntwHd9GoYQn13Y9O4gE1Fq020GfEfipAIxfetpzejnA
+SqhvNRTc2SbDSjXwPJxHgHctLO5V2YE8APlMQf/7tGcEkHPxYWutIfLQYr29DWiY
+3CUUmKv+T/QNAgMBAAGjczBxMB0GA1UdDgQWBBSiOf79NiEDFk7VagHc/LkbZc1m
+vzBQBgNVHREESTBHghZpZHByb3ZpZGVyLmNvc21hemUub3Jnhi1odHRwczovL2lk
+cHJvdmlkZXIuY29zbWF6ZS5vcmcvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBADmEMX5pp7gPg9kOOT8jFxHnURERSDxHQOcc5QUkvENl+sXXmbzAD5uu
+xOHbs3F9h3tc5wd0A521qxpj9CTzESvE6EgrmOFWjGn7Mf566+5YoeLXhq2V4pM5
+5YDDv0F8zApFKSaW71Tz8sQhYFJChpvu21dGw3lzZgUbNPhRJ/W6LWicpnpmERXl
+gye9LkYql14jLD3XSWsffXsDPFEeKblbPlnSLRbAj98sUwpedsubYBLoVmqJm05J
+VlO77o8hAHYzcUraiSIvJy6l1m0OksNOLKHpn7a9NIVMGBvWoE0v/bpb9gbWTdvu
+pDBcyAs4zPQYuEbJXe7/HNZ5oEd/jzg=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIDQjCCAiqgAwIBAgITf1zAkLgxjQ1HvzYM/togShfDgzANBgkqhkiG9w0BAQsF
+ADAhMR8wHQYDVQQDDBZpZHByb3ZpZGVyLmNvc21hemUub3JnMB4XDTE4MDgxMzEy
+MDkwN1oXDTM4MDgxMzEyMDkwN1owITEfMB0GA1UEAwwWaWRwcm92aWRlci5jb3Nt
+YXplLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIrOuHPDlQqu
+W2RnzE/gLp1lINgSQZuXv9NE4OyOinyomNynMY1gG5Ig261BN/hRpPzecQCGIt/y
+bu3XutyQDeyEl/73gRlF07wcK80zvGqfl84s5TOYozqAKGx2ob8gf3OdczFLJvyG
+9GlL3R/cgstm9wAzGFgZD6kxuOn9dLXSrweGAJkxTChCsMfoYyU+n8UcrFPx6irj
+UhsHpVqfr0Ufw4MxHNzm+/eIYIsGTldQ5y+vxvLKqto5d1yq7rB1kAAPY01XFRVo
+/FB2A7HT/uJ3uFaoAMZnxuQY15P2hGlaYZltDtJbxS6BIzMII0zMC2iC5w3QHJYr
+a4awEv9vUeMCAwEAAaNzMHEwHQYDVR0OBBYEFBxem+Oq0bnYdZNCPLX/0gwndiZ5
+MFAGA1UdEQRJMEeCFmlkcHJvdmlkZXIuY29zbWF6ZS5vcmeGLWh0dHBzOi8vaWRw
+cm92aWRlci5jb3NtYXplLm9yZy9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsF
+AAOCAQEAS3uN5M0WIY12nTC5z80/wJ7olbGcfDKrz40+rP0zZHUVjJhuI+byWmwx
+BgNcHXy15L7q84Md1W/HH0WzTpL7ECKW/E6xWEBRROQwvtLSuVvYItEJNJNutDrF
+autTSAP64O7e/i8iuZuQKG+e8IhJk/qBDtIsCWqeINHMJYW6JeAJj6FmgxbsBhGx
+5pNlLzWd11vONXbctBPigBp2rgDb78nrDFH+vaDmpOur2KRNLA4wX+glVPaZglo4
+d7blLUO5ei0iw7tPS7hFQ59AHo7VLa//8qYj7g99HiSmAtXHHfI50zSxWH2cHL8B
+torhbo5o3/81WmgVVeBGfzqgDRhJyA==
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUIzUG7i8lwpFkTYauAmBY7DFZTvIwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWaWRwcm92aWRlci5jb3NtYXplLm9yZzAeFw0xODA4MTMx
+MjA5MDlaFw0zODA4MTMxMjA5MDlaMCExHzAdBgNVBAMMFmlkcHJvdmlkZXIuY29z
+bWF6ZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKmIclHNVj
+BEs0kfLuplIQ+Dpt+Xbw25C+uzida2kQEq43FXnbZQXUf5rWKDeyxS3XGp67kuGj
+IESRb/2uty//MlSzUXkSBQxc7Bi8sYQP7U0pSHWI+PhSyE662FacN43fxlp9GaXX
+06wzzZsaat8PSV47iItv+nlxQNXsCFw6IRlA9ADSlrhDTBLf7c2ddHEbaNPt8bpd
+j5iQ3RHCFHX/uSBa0M/E8Vg1UXzTaoSusrTM1+yZMwdpRYzekGgDcwnH1STL+n8n
+uBsb/0vZGK/zkE5U34jGGggEAC+tm8MKIVnK3hjxm6R+WgcGfteho/JGAd4JDCNX
+qej3vsutTm2pAgMBAAGjczBxMB0GA1UdDgQWBBSe74j+ESxj1obmYw+kT1vVXv/s
+hjBQBgNVHREESTBHghZpZHByb3ZpZGVyLmNvc21hemUub3Jnhi1odHRwczovL2lk
+cHJvdmlkZXIuY29zbWF6ZS5vcmcvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBAHwCmzPknHHhUgGB+J6HOX7Qrzs3IFtWHAJe2dVjIewJ03qeTJ0+Bj0M
+h7wEKB2jVaMfmVK3PSs87qWXNPdcFrHuLNN5ujWwwUqu7RODMHYlH2xcMO1lcoZQ
+iJ5k36mrwpcSf/aACBfXT4lOOX5fmGjQlzWq1oaOvTIzNGyUrt2UOQf6PMZJW2+G
+TB9EgK1v+1IukYX5szmW0MygEHdppCPdjz80tui9JkdXoZ/lgej0TYGITOaA6cHR
+MusPmR9hu531DLtf1+X8/qgWQ4ZdHL9rrD+dpr7FJT98DLMcVofkzv12B8fIEmqI
+mxOcZ3ar0kJB/MCW0ZxfMLv0PeTT0TI=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+
+        <!-- <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idprovider.cosmaze.org:8443/idp/profile/SAML1/SOAP/AttributeQuery"/> -->
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idprovider.cosmaze.org:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+        <!-- If you uncomment the above you should add urn:oasis:names:tc:SAML:2.0:protocol to the protocolSupportEnumeration above -->
+
+    </AttributeAuthorityDescriptor>
+
+</EntityDescriptor>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Authorize</title>
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .login-card {
+      padding: 40px;
+      padding-top: 0px;
+      padding-bottom: 10px;
+      width: 274px;
+      background-color: #F7F7F7;
+      margin: 0 auto 10px;
+      border-radius: 2px;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .login-card h1 {
+      font-weight: 100;
+      text-align: center;
+      font-size: 2.3em;
+    }
+
+    .login-card [type=submit] {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .login-card input[type=text],
+    input[type=email],
+    input[type=password] {
+      height: 44px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+      -webkit-appearance: none;
+      background: #fff;
+      border: 1px solid #d9d9d9;
+      border-top: 1px solid #c0c0c0;
+      padding: 0 8px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+
+    .login-card input[type=text]:hover,
+    input[type=email]:hover,
+    input[type=password]:hover {
+      border: 1px solid #b9b9b9;
+      border-top: 1px solid #a0a0a0;
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .login {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      height: 36px;
+      padding: 0 8px;
+    }
+
+    .login-submit {
+      border: 0px;
+      color: #fff;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+      background-color: #4d90fe;
+    }
+
+    .login-submit:hover {
+      border: 0px;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+      background-color: #357ae8;
+    }
+
+    .login-card a {
+      text-decoration: none;
+      color: #666;
+      font-weight: 400;
+      text-align: center;
+      display: inline-block;
+      opacity: 0.6;
+      transition: opacity ease 0.5s;
+    }
+
+    .login-card a:hover {
+      opacity: 1;
+    }
+
+    .login-help {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .login-client-image img {
+      margin-bottom: 20px;
+    }
+
+    .login-card input[type=checkbox] {
+      margin-bottom: 10px;
+    }
+
+    .login-card label {
+      color: #999;
+      font-size: 16px;
+    }
+
+    .grant-debug {
+      font-family: Fixed, monospace;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      padding-top: 10px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      text-align: left;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  </style>
+  <script>
+
+  function validate() {
+    for (var i = 0; i < document.getElementsByName("select_attribute").length; i++) {
+      alert(document.getElementsByName("select_attribute")[i].checked + "-" + document.getElementsByName("select_attribute")[i].value);
+    }
+
+  }
+
+  function buildConsent() {
+    var consent = {};
+    var table = document.getElementById("consent-table-id");
+    for (var i = 1, row; row = table.rows[i]; i++) {
+      var attibuteName = row.cells[1].innerText;
+      var isSelected = row.cells[2].childNodes[0].checked;
+                      //alert(newcell.childNodes);
+      if (attibuteName && isSelected) {
+        consent[attibuteName] = isSelected;
+      }
+    }
+    // var form = document.getElementById("consent-id");
+
+    // alert("Consent " + JSON.stringify(consent));
+    return JSON.stringify(consent);
+  }
+
+  function buildFormAndSubmit(){
+    document.getElementById("consent-id").value = buildConsent();
+    console.log("Updated consent "+document.getElementById("consent-id").value);
+
+    // form.submit();
+  }
+
+  </script>
+</head>
+
+<body>
+  <div class="login-card">
+    <h1>Authorize</h1>
+      <table id="consent-table-id" class="table table-striped table-bordered nowrap" width="100%">
+        <thead>
+          <tr>
+            <th>Sno.</th>
+            <th>Attribute</th>
+            <th><input name="select_all_attributes" value="1" type="checkbox" checked></th>
+          </tr>
+        </thead>
+        <% i = 1 %>
+          <% (details.params.scope).split(' ').forEach(function(attribute) { %>
+            <tbody>
+              <tr>
+                <td>
+                  <%= i++ %>
+                </td>
+                <td>
+                  <%= attribute %>
+                </td>
+                <td><input type="checkbox" name="select_attribute" checked /></td>
+              </tr>
+            </tbody>
+            <% }); %>
+        <table>
+    <form id="consent-form-id" autocomplete="off" action="/interaction/<%= details.uuid %>/consent" method="post">
+        <input required type="hidden" id="account-id" name="accountId" value=<%= account.accountId %> >
+        <input required type="hidden" id="consent-id" name="consent" >      
+        <button autofocus type="submit" onclick="buildFormAndSubmit()" name="submit" class="login login-submit">Approve</button>
+    </form>
+    <div class="login-help">
+      <a href="<%= details.returnTo %>">[ Cancel ]</a>
+    </div>
+  </div>
+</body>
+
+</html>

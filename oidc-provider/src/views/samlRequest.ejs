@@ -1,0 +1,14 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+</head>
+
+<body onload="document.forms.samlRequestForm.submit()">
+  <form name="samlRequestForm" action="<%= idpSSOurl %>" method="post">
+    <input name="RelayState" value="<%= relayStateParam %>" />
+    <input name="SAMLRequest" value="<%= samlAuthNRequest %>" />
+    <input type="submit" value="Continue" />
+  </form>
+</body>
+
+</html>
