@@ -24,4 +24,4 @@
   - Independent service (Standalone or Containerized or Cloud)
 
 **Architecture**
-[[https://github.com/jainmanoj/UniversalIdentityProvider/blob/master/docs/Architecture.jpg|alt=Architecture]]
+[[https://github.com/jainmanoj/UniversalIdentityProvider/blob/master/docs/Architecture.jpg]]
