@@ -1,61 +1,27 @@
-# React Passport Example Application
+# UniversalIdentityProvider 
 
-An example application which combines a back-end which stores user data and front-end React.js application which handles user authentication sessions.
+**Overview**
+1)Multi-strategy based authentication and authorization  middleware.
+  Following stratgy are supported
+  - Local Directory   (Local DB)
+  - Active Directory / LDAP 
+  - SAML  IDP
+  - Social login (Google ….)
 
-This application be easily separated into two completely different repositories.
+2) Multifactor authentication
+  - OTP
+  - OTP + Speech (Limited support)
+  - OTP + Speech + Video (Not supported)
+3) Build around OpenID Connect to delegate authentication to external Identity provider
+4) First factor authentication is done by external IDP provider
+5) Based on risk profile (Computed by AI based risk scoring engine) – User is prompted for higher level authentication.
 
-Created using the tutorials below:
+**Features -**
+  - Multi-strategy based IAM  middleware with pluggable authentication strategy
+  - Unified Attribute Based Policy Model – Intent based access policy – (NLP in pipeline for intent modeling)
+  - OAuth with JWT  bearer tokens
+  - Stateless authentication service (Suitable for all type of applications)
+  - Independent service (Standalone or Containerized or Cloud)
 
-https://vladimirponomarev.com/blog/authentication-in-react-apps-creating-components
-https://vladimirponomarev.com/blog/authentication-in-react-apps-jwt
-
-However, this version has replaced the React Router v3 which were used in the above tutorials with the most recent React Router v4 which has some major differences. I also made some minor tweaks to account for the NPM packages which had issues due to updates since the tutorial was published.
-
-This application incorporates the following packages:
-
-- axios
-- bcryptjs
-- jsonwebtoken
-- mongoose
-- passport
-- react-router-dom
-- validator
-
-## Installation
-
-After cloning the repo, follow the steps below:
-```sh
-$ cd react-passport-example
-```
-```sh
-$ yarn install
-```
-```sh
-$ sudo mongod
-```
-```sh
-$ yarn run dev
-```
-
-When editing the files, run the following command for webpack to watch your files and bundle whenever changes are made:
-```sh
-$ yarn run bundle
-```
-
-## Screenshots
-
-Home page before login:
-
-![Alt Home Page](/README/home.png?raw=true)
-
-Sign up page:
-
-![Alt Signup Page](/README/signup.png?raw=true)
-
-Login page:
-
-![Alt Login Page](/README/login.png?raw=true)
-
-Dashboard which is only accessible after login:
-
-![Alt Dashboard](/README/dashboard.png?raw=true)
+**Architecture**
+[[https://github.com/jainmanoj/UniversalIdentityProvider/blob/master/docs/Architecture.jpg
