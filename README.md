@@ -1,6 +1,6 @@
 # UniversalIdentityProvider 
 
-**Overview**
+**Overview** <br><br>
 1)Multi-strategy based authentication and authorization  middleware.
   Following stratgy are supported
   - Local Directory   (Local DB)
@@ -16,6 +16,7 @@
 4) First factor authentication is done by external IDP provider
 5) Based on risk profile (Computed by AI based risk scoring engine) – User is prompted for higher level authentication.
 
+
 **Features -**
   - Multi-strategy based IAM  middleware with pluggable authentication strategy
   - Unified Attribute Based Policy Model – Intent based access policy – (NLP in pipeline for intent modeling)
@@ -23,11 +24,14 @@
   - Stateless authentication service (Suitable for all type of applications)
   - Independent service (Standalone or Containerized or Cloud)
 
-**Architecture**
-[[https://github.com/jainmanoj/UniversalIdentityProvider/blob/master/docs/Architecture.jpg
+**Architecture**<br>
+[![Alt Architecture of UniversalIdentityProvider](https://github.com/jainmanoj/UniversalIdentityProvider/blob/master/docs/Architecture.jpg "UniversalIdentityProvider Architecture")
+
+**Online demo**<br><br>
+[![Alt Online demo of UniversalIdentityProvider](https://img.youtube.com/vi/oWxnyeNrh_Y/0.jpg)](https://www.youtube.com/watch?v=oWxnyeNrh_Y)
 
 
-**Getting started**
+**Getting started**<br>
 
 1. npm run bundle:dev  - this will create webpack bundle of react views and mounted on client-views/dist/js/app.js
 2. You can lauch the application with npm start
