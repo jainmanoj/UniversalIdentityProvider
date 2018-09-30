@@ -24,10 +24,10 @@
   - Stateless authentication service (Suitable for all type of applications)
   - Independent service (Standalone or Containerized or Cloud)
 
-**Architecture**<br>
+**Architecture**
 [![Alt Architecture of UniversalIdentityProvider](https://github.com/jainmanoj/UniversalIdentityProvider/blob/master/docs/Architecture.jpg "UniversalIdentityProvider Architecture")
 
-**Online demo**<br><br>
+**Online demo**
 [![Alt Online demo of UniversalIdentityProvider](https://img.youtube.com/vi/oWxnyeNrh_Y/0.jpg)](https://www.youtube.com/watch?v=oWxnyeNrh_Y)
 
 
